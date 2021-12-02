@@ -37,5 +37,5 @@ jobs:
           password: ${{ secrets.ACR_DEST_PASSWORD }}
       - run: |
           docker pull ${{ secrets.ACR_SRC_IMAGE }}
-          docker tag ${{ secrets.ACR_SRC_IMAGE }} ${{ secrets.ACR_SRC_IMAGE }}
+          docker tag ${{ secrets.ACR_SRC_IMAGE }} ${{ secrets.ACR_DEST_IMAGE }}
           docker push ${{ secrets.ACR_DEST_IMAGE }}
